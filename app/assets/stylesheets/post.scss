@@ -1,0 +1,40 @@
+
+// li {
+//   border: 1px solid blue;
+//   .submission {
+//
+//     .vote {
+//
+//       height: 60px;
+//       border: 1px solid red;
+//       span {
+//         flex-direction: row;
+//         color: red;
+//         border: 1px solid black;
+//       }
+//     }
+//   }
+// }
+
+.vote {
+  color: #B7B7B7;
+  .arrow {
+    margin: 0 auto;
+  }
+  .arrow-up:active {
+    color: #FF8A5E
+  }
+  .arrow-down:active {
+    color: #9292FF
+  }
+  .number-of-votes {
+    margin: 0 auto;
+  }
+}
+.media {
+  .image {
+    img {
+      width: 80px;
+    }
+  }
+}

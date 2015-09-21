@@ -1,0 +1,24 @@
+<h1>Very success</h1>
+
+<% @submissions.each do |submission| %>
+    <div class="media">
+      <div class="media-left media-middle">
+        <div class="vote">
+          <%= link_to score_post_path(id: submission.id), method: :post do %>
+            <i class="glyphicon glyphicon-arrow-up arrow arrow-up"></i>
+            <%= submission.score %>
+          <% end %>
+          <span class="glyphicon glyphicon-arrow-down arrow arrow-down" aria-hidden="true"></span>
+        </div>
+      </div>
+      <div class="media-left media-middle image">
+        <a href="#">
+          <img class="media-object" src"http://google.com" alt=img src="https://atbrand.com/wp-content/uploads/2015/09/new-google-g-icon.png">
+        </a>
+      </div>
+      <div class="media-body">
+        <h3 class="media-heading"><%= link_to submission.title, "http://#{submission.url}" %><small><%= submission.domain %></small></h3>
+        submitted <%= distance_of_time_in_words_to_now submission.created_at %> ago by <%= submission.username %>.
+      </div>
+    </div>
+<% end %>
