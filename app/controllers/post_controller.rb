@@ -1,6 +1,6 @@
 class PostController < ApplicationController
   def list
-    @submissions = Submission.all
+    @submissions = Submission.all.order("score DESC")
   end
 
   def score
